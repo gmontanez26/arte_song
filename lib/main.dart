@@ -10,7 +10,7 @@ class Miapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, //quitar enunciado arriba a la derecha
+      debugShowCheckedModeBanner: false, //quitar ennunciado arriba a la derecha
       title: "Mi App",
       home: Inicio(),
     );
