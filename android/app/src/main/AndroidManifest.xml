@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.arte_song">
+    package="com.example.arte_son_sprint2">
    <application
-        android:label="arte_song"
+        android:label="arte_son_sprint2"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

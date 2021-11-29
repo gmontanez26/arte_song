@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PaginaVerEstados extends StatelessWidget {
-  const PaginaVerEstados({Key? key}) : super(key: key);
-
+class Page_Ver_Estados extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

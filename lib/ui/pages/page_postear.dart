@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-class PaginaPostear extends StatelessWidget {
-  const PaginaPostear({Key? key}) : super(key: key);
-
+class Page_Postear extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
+      //--------------pagina prueba inicio-----------------
       padding: const EdgeInsets.all(20.0),
       child: ListView(
         children: [
@@ -69,6 +68,7 @@ class PaginaPostear extends StatelessWidget {
               )),
         ],
       ),
-    ));
+    ) //--------------pagina prueba final-----------------
+        );
   }
 }

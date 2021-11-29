@@ -1,13 +1,10 @@
-import 'package:arte_song/pages/PaginaActividades.dart';
-import 'package:arte_song/pages/configuraciones.dart';
-import 'package:arte_song/pages/login.dart';
-import 'package:arte_song/paginapostear.dart';
-import 'package:arte_song/paginaverestados.dart';
-import 'package:flutter/material.dart';
+import 'package:arte_son_sprint2/ui/pages/Page_configuraciones.dart';
+import 'package:arte_son_sprint2/ui/pages/page_actividades.dart';
+import 'package:arte_son_sprint2/ui/pages/page_mensajes.dart';
 
-import '../paginapostear.dart';
-import '../paginaverestados.dart';
-import 'PaginaActividades.dart';
+import 'package:arte_son_sprint2/ui/pages/page_postear.dart';
+import 'package:arte_son_sprint2/ui/pages/page_ver_estados.dart';
+import 'package:flutter/material.dart';
 
 class PageHome extends StatelessWidget {
   const PageHome({Key? key}) : super(key: key);
@@ -33,9 +30,10 @@ class _InicioState extends State<Inicio> {
   int _paginaactual = 0;
   List<Widget> _paginas = [
     //menu de paginas
-    PaginaVerEstados(),
-    PaginaPostear(),
-    PaginaActividades(),
+    Page_Ver_Estados(),
+    Page_Postear(),
+    Page_Actividades(),
+    Page_Mensajes(),
   ];
 
   @override
@@ -72,7 +70,7 @@ class _InicioState extends State<Inicio> {
                     context,
                     MaterialPageRoute(
                         builder: (context) =>
-                            Configuraciones())) //page configuration
+                            Page_Configuraciones())) //page configuration
               },
             ),
           ],
@@ -81,19 +79,23 @@ class _InicioState extends State<Inicio> {
         // body: _paginaactual == 0 ? PaginaHome() : PaginaUser(), para dos paginas
         body: _paginas[
             _paginaactual], //lista de paginas---------------------------
+
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           onTap: (index) {
             setState(() {
               _paginaactual = index;
             });
           },
           currentIndex: _paginaactual,
-          items: [
+          items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Ver "),
             BottomNavigationBarItem(
                 icon: Icon(Icons.post_add), label: "Postear"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.circle_notifications), label: "Actividades"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.chat_outlined), label: "mensajes"),
           ],
         ),
       ),

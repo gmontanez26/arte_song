@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Configuraciones extends StatelessWidget {
-  const Configuraciones({Key? key}) : super(key: key);
-
+class Page_Configuraciones extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +24,7 @@ class Configuraciones extends StatelessWidget {
           ),
         ),
         body: Padding(
+          //pagina de Prueba -----------inicio-----------------
           padding: const EdgeInsets.all(20.0),
           child: ListView(
             children: [
@@ -72,6 +71,7 @@ class Configuraciones extends StatelessWidget {
                   onPressed: () => {})
             ],
           ),
-        ));
+        ) //pagina de Prueba -----------final-----------------
+        );
   }
 }
